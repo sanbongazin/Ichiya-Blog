@@ -5,7 +5,11 @@ import { SITE_TITLE } from '../consts';
 
 <header>
 	<nav>
-		<h2><a href="/">{SITE_TITLE}</a></h2>
+		<h2>
+			<a href="/" class="flex items-center space-x-2">
+				<img src="/logo_horizonal_small.png" alt="あきほしデータサービス" class="h-10 max-w-[140px] object-contain block" />
+				<span class="text-xl font-bold text-pink-600 sr-only">あきほしデータサービス</span>
+			  </a>
 		<div class="internal-links">
 			<HeaderLink href="/">Home</HeaderLink>
 			<HeaderLink href="/blog">Blog</HeaderLink>
