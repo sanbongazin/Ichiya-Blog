@@ -39,33 +39,39 @@ const posts = (await getCollection('blog')).sort(
         <a href="/tags/モラル" class="bg-pink-100 hover:bg-pink-200 py-4 rounded-xl">🤝 モラル</a>
       </section>
 	  <br>
+
+	 <section class="mb-12">
+		<h2 class="text-2xl font-semibold mb-4">ℹ 暁星いちやとは</h2>
+
+
+
       <!-- Recent Posts -->
-	  <section class="mb-12">
+		<section class="mb-12">
 		<h2 class="text-2xl font-semibold mb-4">📝 最近の記事</h2>
 		<div class="grid gap-6 md:grid-cols-2">
-		  {
+			{
 			posts.map((post) => (
-			  <a
+				<a
 				href={`/blog/${post.id}/`}
 				class="block bg-white border border-pink-200 shadow hover:shadow-md rounded-xl p-5 transition"
-			  >
+				>
 				{post.data.heroImage && (
-				  <img
+					<img
 					src={post.data.heroImage}
 					alt={post.data.title}
 					class="mb-3 rounded-md max-h-40 object-cover w-full"
-				  />
+					/>
 				)}
 				<h3 class="text-xl font-semibold text-pink-700 mb-1">{post.data.title}</h3>
 				<p class="text-sm text-gray-600">{post.data.description}</p>
 				<p class="text-xs text-right text-gray-400 mt-2">
-				  <FormattedDate date={post.data.pubDate} />
+					<FormattedDate date={post.data.pubDate} />
 				</p>
-			  </a>
+				</a>
 			))
-		  }
+			}
 		</div>
-	  </section>
+		</section>
 
       <div class="text-center">
         <a href="/blog" class="text-pink-600 hover:underline font-semibold">👉 すべての記事を読む</a>
