@@ -9,5 +9,5 @@ export default defineConfig({
 	// integrations: [mdx(), sitemap()],
 	site: 'https://sanbongazin.github.io/ichiya-blog',
 	output: 'static',
-	base: '/ichiya-blog/', // ここが重要！
+	base: '/ichiya-blog', // ここが重要！
 });
